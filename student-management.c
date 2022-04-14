@@ -17,10 +17,11 @@ int main() {
     
     struct Student students[10];
     
-    for (i = 0; i < 10;) {
+    printf("Welcome to the student management app\n");
 
-        printf("Welcome to the student management app\n\n");
-        printf("****************************\n\n");
+    for (i = 0; i < 10;) {
+    
+        printf("\n****************************\n\n");
         
         printf("Please select an option:\n\n");
         printf("1 - Create a student\n");
@@ -52,7 +53,7 @@ int main() {
                 break;
             
             case 2:
-                printf("Students:\n");
+                printf("\nStudents:\n");
                 printf("******************\n\n");
                 
                for (l = 0; l < 10; l++) {
@@ -65,7 +66,7 @@ int main() {
                    }
                }
 
-               printf("Press ENTER to continue.\n");
+               printf("Press ENTER to continue.");
                while(getchar() != '\n');
                break;
             
@@ -83,18 +84,20 @@ int main() {
                     printf("GPA: %.1f\n", students[posit].gpa);
                     printf("Age: %d\n\n", students[posit].age);
 
-                    printf("Press ENTER to continue.\n");
+                    printf("Press ENTER to continue.");
                     while(getchar() != '\n');
                 } else {
                     printf("Student ID no. %d not found.\n\n", id);
                     
-                    printf("Press ENTER to continue.\n");
+                    printf("Press ENTER to continue.");
                     while(getchar() != '\n');
                 }
                 break;
             
             case 0:
                 printf("\nThank you for using the application!\n");
+                printf("Press ENTER to continue.");
+                while(getchar() != '\n');
                 exit(0);
             
             default:
